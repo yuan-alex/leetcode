@@ -10,11 +10,4 @@ class Solution:
         while pointer:
             vals.append(pointer.val)
             pointer = pointer.next
-        left = 0
-        right = len(vals) - 1
-        while left < right:
-            if vals[left] != vals[right]:
-                return False
-            left += 1
-            right -= 1
-        return True
+        return vals == vals[::-1]
