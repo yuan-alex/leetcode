@@ -1,3 +1,5 @@
 # LeetCode Solutions
 
-Starting the LeetCode grind today, on January 12th, 2021.
+Current solutions are mostly written in Python 3. You may freely fork these solutions and do whatever you want.
+
+If you have a suggestion or an improvement for a solution, don't hesitate to email me. I'm looking forward to your comments.
