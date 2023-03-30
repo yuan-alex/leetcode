@@ -1,14 +1,9 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if len(strs) == 1:
-            return strs[0]
-        prefix = strs[0]
-        for i in range(1, len(strs)):
-            newPrefix = ""
-            for j in range(0, len(strs[i])):
-                if j < len(prefix) and prefix[j] == strs[i][j]:
-                    newPrefix += prefix[j]
-                else:
-                    break
-            prefix = newPrefix
-        return prefix
+        pointer = 0
+        while pointer < min([len(i) for i in strs]):
+            for i in range(len(strs) - 1):
+                if strs[i][pointer] != strs[i+1][pointer]:
+                    return strs[0][:pointer]
+            pointer += 1
+        return strs[0][:pointer]
